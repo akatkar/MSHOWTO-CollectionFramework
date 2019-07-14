@@ -1,11 +1,7 @@
-package org.mshowto.alikatkar.collectionframework.model;
+package com.akatkar.demos.collectionframework.model;
 
-/**
- *
- * @author akatkar
- */
 public class Card implements Comparable {
-    // Kartın Renki:Sinek, Karo, Kupa, Maça
+    // Kartın Rengi:Sinek, Karo, Kupa, Maça
     private Suit suit;
     // Kartın değeri: 2,3,4,5,6,7,8,9,10,J,D,K,A
     private Rank rank;
@@ -35,10 +31,7 @@ public class Card implements Comparable {
         if (this.suit != other.suit) {
             return false;
         }
-        if (this.rank != other.rank) {
-            return false;
-        }
-        return true;
+        return this.rank == other.rank;
     }
 
     @Override

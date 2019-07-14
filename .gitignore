@@ -10,3 +10,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/CollectionFrameworkDemo/nbproject/private/
+/CollectionFrameworkDemo/build/
+
+### NetBeans ###
+/collection-framework-demo/nbproject/private/
+/collection-framework-demo/build/
+/collection-framework-demo/nbbuild/
+/collection-framework-demo/dist/
+/collection-framework-demo/nbdist/
+/collection-framework-demo/.nb-gradle/

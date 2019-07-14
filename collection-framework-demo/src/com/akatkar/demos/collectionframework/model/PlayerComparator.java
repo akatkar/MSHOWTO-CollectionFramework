@@ -1,15 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package org.mshowto.alikatkar.collectionframework.model;
+package com.akatkar.demos.collectionframework.model;
 
 import java.util.Comparator;
 
-/**
- *
- * @author akatkar
- */
 public class PlayerComparator implements Comparator<Card> {
 
     private int getSuitOrdinal(Card c){

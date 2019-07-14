@@ -1,15 +1,10 @@
-package org.mshowto.alikatkar.collectionframework.arraylist.demo;
+package com.akatkar.demos.collectionframework;
 
+import com.akatkar.demos.collectionframework.model.*;
 import java.util.ArrayList;
 import java.util.List;
-import org.mshowto.alikatkar.collectionframework.model.Card;
-import org.mshowto.alikatkar.collectionframework.model.Rank;
-import org.mshowto.alikatkar.collectionframework.model.Suit;
 
-/**
- *
- * @author akatkar
- */
+
 public class ArrayListMergeDemo {
 
     private static final int MAX_COUNT = 7;
@@ -25,7 +20,7 @@ public class ArrayListMergeDemo {
 
     private static void initializeLists() {
 
-        originalList = new ArrayList<Card>();
+        originalList = new ArrayList<>();
         int i = 0;
         for (Rank rank : Rank.values()) {
             Card card = new Card(Suit.CLUBS, rank);
@@ -36,7 +31,7 @@ public class ArrayListMergeDemo {
             originalList.add(card);
         }
 
-        newList = new ArrayList<Card>();
+        newList = new ArrayList<>();
         i = 0;
         for (Rank rank : Rank.values()) {
             i++;

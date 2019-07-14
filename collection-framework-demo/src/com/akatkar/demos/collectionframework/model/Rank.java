@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package org.mshowto.alikatkar.collectionframework.model;
+package com.akatkar.demos.collectionframework.model;
 
-/**
- *
- * @author akatkar
- */
 public enum Rank {
 
     TWO("2"),
@@ -25,7 +17,7 @@ public enum Rank {
     ACE("A");
     
     
-    private String symbol;
+    private final String symbol;
 
     private Rank(String symbol) {
         this.symbol = symbol;
