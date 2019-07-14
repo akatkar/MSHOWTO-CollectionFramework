@@ -47,9 +47,9 @@ public class ArrayListMergeDemo {
     }
 
     private static void deleteAll() {
-        System.out.println("* * * Bir listeninin diðerinden çýkarýlmasý  * * *");
+        System.out.println("* * * Bir listeninin diğerinden çıkarılması  * * *");
         initializeLists();
-        showLists("Listelerin iþlem yapýlmadan önceki durumu");
+        showLists("Listelerin işlem yapılmadan önceki durumu");
         // Yeni listede olan elemanlar orijinal listeden siliniyor
         originalList.removeAll(newList);
         showLists("Yeni listedeki elemanlar orijinal listeden silindi");
@@ -66,23 +66,14 @@ public class ArrayListMergeDemo {
         System.out.println("-----------------------------------------");
     }
 
-    private static void mergeTwoList() {
+    private static void findIntersection() {
         System.out.println("* * * İki Listenin Birleştirilmesi * * *");
         initializeLists();
         showLists("Listelerin işlem yapılmadan önceki durumu");
         // Orijinal listede olup, yeni listede olmayanlar çıkarılıyor
         // Bu işlem aynı zamanda silme işlemi oluyor.
         originalList.retainAll(newList);
-
-        // Orijinal listede olup, yeni listede olanlar çıkarılıyor
-        // Var olan elemanlar değişmesin diye yapıyoruz
-        newList.removeAll(originalList);
-
-
-        // Orijinal listede olup, yeni listede olanlar çıkarılıyor
-        // Yeni elemanlar ekleniyor
-        originalList.addAll(newList);
-
+       
         showLists("Orijinal listeye yeni listedeki yeni elemanlar eklendi ");
         System.out.println("-----------------------------------------");
     }
@@ -91,6 +82,6 @@ public class ArrayListMergeDemo {
 
         deleteAll();
         addingDifferentMembers();
-        mergeTwoList();
+        findIntersection();
     }
 }
