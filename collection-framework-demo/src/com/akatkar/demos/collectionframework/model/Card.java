@@ -2,9 +2,9 @@ package com.akatkar.demos.collectionframework.model;
 
 public class Card implements Comparable {
     // Kartın Rengi:Sinek, Karo, Kupa, Maça
-    private Suit suit;
+    private final Suit suit;
     // Kartın değeri: 2,3,4,5,6,7,8,9,10,J,D,K,A
-    private Rank rank;
+    private final Rank rank;
     
     public Card(Suit suit, Rank rank){
         this.suit = suit;
