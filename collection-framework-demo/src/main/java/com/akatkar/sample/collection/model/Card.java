@@ -1,6 +1,6 @@
 package com.akatkar.sample.collection.model;
 
-public class Card implements Comparable {
+public class Card implements Comparable<Card> {
     // Kartın Rengi:Sinek, Karo, Kupa, Maça
     private final Suit suit;
     // Kartın değeri: 2,3,4,5,6,7,8,9,10,J,D,K,A
@@ -28,10 +28,7 @@ public class Card implements Comparable {
             return false;
         }
         final Card other = (Card) obj;
-        if (this.suit != other.suit) {
-            return false;
-        }
-        return this.rank == other.rank;
+        return this.suit == other.suit && this.rank == other.rank;
     }
 
     @Override
@@ -42,32 +39,11 @@ public class Card implements Comparable {
         return hash;
     }
 
-    public int compareTo(Object obj) {
-        if (obj == null) {
-            return -1;
+    public int compareTo(Card other) {
+        if (this.suit == other.suit) {
+            return this.rank.compareTo(other.rank);
         }
-        if (getClass() != obj.getClass()) {
-            return -1;
-        }
-        final Card other = (Card) obj;
-        if (this.suit.ordinal() > other.suit.ordinal()) {
-            return 1;
-        }
-        if (this.suit.ordinal() < other.suit.ordinal()) {
-            return -1;
-        }        
-        
-        // Bu noktada her iki kart aynı renktedir(suit)
-        if (this.rank.ordinal() > other.rank.ordinal()) {
-            return 1;
-        }
-        if (this.rank.ordinal() < other.rank.ordinal()) {
-            return -1;
-        }
-        
-        // Normal olarak kod buraya hiç gelmemeli. Her bir card'dan sadece bir tane olacağından 
-        // iki kart eşit olamaz. (En azından bir deste için)
-        return 0;
+        return this.suit.compareTo(other.suit);
     }
 
     @Override

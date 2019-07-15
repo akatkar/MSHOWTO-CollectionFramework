@@ -9,7 +9,7 @@ import com.akatkar.sample.collection.model.*;
 public class ArrayListDemo {
 
     public static void main(String[] args) {
-        List deck = new ArrayList();
+        List<Card> deck = new ArrayList<>();
         
         for(Suit suit:Suit.values()){
             for(Rank rank:Rank.values()){

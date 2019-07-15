@@ -19,7 +19,7 @@ public class ArrayListOperations {
 
 	private static void initializeLists() {
 
-		originalList = new ArrayList();
+		originalList = new ArrayList<>();
 		int i = 0;
 		for (Rank rank : Rank.values()) {
 			Card card = new Card(Suit.CLUBS, rank);
