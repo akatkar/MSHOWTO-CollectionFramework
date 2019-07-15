@@ -5,9 +5,9 @@ import java.util.Comparator;
 public class PlayerComparator implements Comparator<Card> {
 
     private int getSuitOrdinal(Card c){
-        if(c.getSuit() == Suit.HEARTS)
-            return c.getSuit().ordinal() + 2;
-        return c.getSuit().ordinal();
+        return c.getSuit() == Suit.HEARTS ?
+                    c.getSuit().ordinal() + 2 :
+                    c.getSuit().ordinal();
     }
     
     public int compare(Card card1, Card card2) {
