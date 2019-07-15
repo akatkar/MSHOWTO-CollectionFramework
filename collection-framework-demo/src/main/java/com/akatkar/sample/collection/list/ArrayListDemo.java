@@ -1,15 +1,14 @@
-package com.akatkar.demos.collectionframework;
+package com.akatkar.sample.collection.list;
 
-import com.akatkar.demos.collectionframework.model.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.akatkar.sample.collection.model.*;
 
 public class ArrayListDemo {
 
     public static void main(String[] args) {
-        
         List deck = new ArrayList();
         
         for(Suit suit:Suit.values()){
@@ -41,3 +40,4 @@ public class ArrayListDemo {
          
     }
 }
+
